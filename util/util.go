@@ -7,9 +7,9 @@ import (
 
 func Timer(name string) func() {
 	start := time.Now()
-	elapsed := time.Since(start)
 
 	return func() {
+		elapsed := time.Since(start)
 		fmt.Printf("--[ %s took %s\n", name, elapsed)
 	}
 }
